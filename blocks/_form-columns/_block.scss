@@ -1,0 +1,23 @@
+/* Form Columns Block */
+
+.form-columns-block {
+  margin-block-end: 50px;
+
+  h2:not(.gform_submission_error) {
+    margin-bottom: 20px;
+  }
+
+  .block_size_wide, .inner_alignwide {
+    max-inline-size: 100%;
+  }
+
+
+
+  @media (max-width: 850px) {
+    .columns {
+      --grid-max-col-count: 1;
+    }
+    
+  }
+
+}

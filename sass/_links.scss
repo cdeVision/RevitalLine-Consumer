@@ -1,0 +1,158 @@
+/*	--------------------------------------------------
+	Links
+	-------------------------------------------------- */
+
+a {
+	color: $link-color-main;
+	line-height: inherit;
+	word-wrap: break-word;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+    text-decoration: inherit;
+}
+a:focus {
+	color: inherit;
+	outline: none;
+	text-decoration:inherit;
+}
+a:visited {
+	line-height: inherit;
+	color: $link-color-main;
+}
+a:hover {
+	color: $link-color-main-hover;
+	font-weight: bold;
+	text-decoration: none !important;
+}
+
+
+
+a.box,
+.primary-menu .menu-item.rep a,
+#gform_1 .gform_footer input[type=submit],
+#gform_2 .gform_footer input[type=submit],
+#gform_3 .gform_footer input[type=submit],
+#gform_4 .gform_footer input[type=submit],
+#gform_5 .gform_footer input[type=submit],
+#gform_6 .gform_footer input[type=submit],
+#gform_7 .gform_footer input[type=submit],
+#gform_8 .gform_footer input[type=submit],
+#gform_9 .gform_footer input[type=submit],
+#gform_10 .gform_footer input[type=submit] {
+	display:inline-block;
+	margin: 0;
+	padding: 6px 12px;
+	font-family: $font-stack-base;
+	font-size:14px;
+	line-height:22px;
+	color: #FFF;
+	text-decoration:none;
+	font-style: normal !important;
+	font-weight: 800 !important;
+	position: relative;
+	background: $primary-color;
+	text-transform: uppercase;
+	transition-duration: 0.25s;
+	border-radius: 6px;
+	
+}
+a.box:visited {
+	color: #FFF;
+	text-decoration:inherit;
+	font-weight: inherit;
+}
+a.box:after,
+.primary-menu .menu-item.rep a:after {
+    font-size: 14px;
+    content: "\f054";
+		padding-left: 6px;
+		
+	  @include awesome-icon;
+}
+
+
+a.box.back:before {
+	font-size: 14px;
+  content: "\f054";
+	padding-right: 6px;
+		
+	@include awesome-icon;
+}
+a.box.back:after {
+    display: none;
+}
+
+a.box.rev {
+	padding: 0;
+  color: $primary-color;
+  background: none;
+}
+a.box.rev:visited {
+	color: $primary-color;
+}
+
+a.box.white {
+  color: #FFF;
+}
+a.box.white:visited {
+	color: #FFF;
+}
+
+
+a.box.pdf:after {
+  font-size: 16px;
+	padding-left: 8px;
+  content: "\f1c1";
+}
+
+a.box.loc:after,
+.primary-menu .menu-item.rep a:after {
+  font-size: 14px;
+	padding-left: 8px;
+  content: "\f3c5";
+}
+
+a.box.down:after {
+  content: "\f078";
+}
+a.box.up:after {
+  content: "\f077";
+}
+
+
+a.box:hover,
+.primary-menu .menu-item.rep a:hover,
+#gform_1 .gform_footer input[type=submit]:hover,
+#gform_2 .gform_footer input[type=submit]:hover,
+#gform_3 .gform_footer input[type=submit]:hover,
+#gform_4 .gform_footer input[type=submit]:hover,
+#gform_5 .gform_footer input[type=submit]:hover,
+#gform_6 .gform_footer input[type=submit]:hover,
+#gform_7 .gform_footer input[type=submit]:hover,
+#gform_8 .gform_footer input[type=submit]:hover,
+#gform_9 .gform_footer input[type=submit]:hover,
+#gform_10 .gform_footer input[type=submit]:hover {
+	color: #FFF;
+	text-decoration:inherit;
+	font-weight: inherit;
+  background: $secondary-color;
+	text-decoration:none !important;
+}
+
+a.box.rev:hover {
+	color: $secondary-color;
+	text-decoration:inherit;
+	font-weight: inherit;
+  background: none;
+}
+
+a.box.white:hover {
+	color: #FFF;
+}
+
+p + p.linkwrap {
+  margin-top: -10px; }

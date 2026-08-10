@@ -1,0 +1,60 @@
+/* Hero Block */
+
+.hero-block {
+  
+
+  .hero-block-inner {
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+    background-attachment: fixed;
+  }
+
+  .text {
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+      
+      &.right {
+          justify-content: flex-end;
+      }
+
+      .hero-block-inner-wrap {
+          padding: 30px;
+          max-width: 600px;
+          background-color: rgba(#000, .5);
+          border-radius: $border-radius;
+      }
+      .hero-block-inner-quote-wrap {
+        max-width: 600px;
+    }
+  }
+}
+
+
+/* Mobile */
+@media (max-width: $mobile-break) {
+
+  .hero-block {
+    
+      .hero-block-inner {
+        background-attachment: scroll;
+      }
+  
+      .text {
+          min-height: 330px;
+
+          &.right {
+              justify-content: flex-start;
+          }
+  
+          .hero-block-inner-wrap {
+              padding: 20px;
+              max-width: 100%;
+          }
+      }
+  }
+
+} 
+

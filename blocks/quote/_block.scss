@@ -1,0 +1,61 @@
+/* Quote Block */
+
+
+.quote-block {
+    margin-block: $spacing-content-large;
+
+    img {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+    
+    .quote-text {
+        text-align: center;
+        margin-bottom: 10px;
+
+        p {
+            font-size: var(--step-3);
+            line-height: var(--lh-step-3);
+            text-align: center;
+            margin: 0;
+        }
+        .fa {
+            font-size: var(--step-3);
+            color: $block_backgound_light;
+            padding-right: 10px;
+        }
+    }
+    p.by {
+        font-size: var(--step-1);
+        line-height: var(--lh-step-1);
+        font-weight: 400;
+        text-align: center;
+    }
+
+}
+
+.block_size_none .quote-text-wrap,
+.block_size_wide .quote-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.block_size_breakout .quote-text-wrap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .quote-text {
+        text-align: center;
+        margin-bottom: 10px;
+
+        p {
+            text-align: left;
+        }
+    }
+    p.by {
+        text-align: left;
+    }
+}

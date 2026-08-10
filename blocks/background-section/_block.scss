@@ -1,0 +1,36 @@
+/* Background Section Block */
+
+.wrapper-background-block {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-inline: 0 !important;
+
+  .acf-innerblocks-container > *:first-child {
+    margin-top: 0 !important;
+  }
+  .acf-innerblocks-container > *:first-child *:first-child {
+    margin-top: 0 !important;
+  }
+
+  .acf-innerblocks-container > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  @media screen and (min-width: 970px) {
+    .acf-innerblocks-container > *:last-child *:last-child {
+        margin-bottom: 0 !important;
+      }
+  }
+
+
+  &.bg-scroll {
+    background-attachment: scroll;
+    background-position: top center;
+  }
+
+  @media screen and (max-width: 600px) {
+    background-image: none !important;
+  }
+}

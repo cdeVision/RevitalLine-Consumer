@@ -1,0 +1,1240 @@
+{
+    "key": "group_67a52a454776d",
+    "title": "Block - Columns",
+    "fields": [
+        {
+            "key": "field_67a52a454d5f2",
+            "label": "Columns",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67a62795ca213",
+            "label": "Column Width",
+            "name": "block_size",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block_size_wide": "Normal",
+                "block_size_breakout": "Breakout",
+                "block_size_full": "Full"
+            },
+            "default_value": "block_size_wide",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a52a5c7aa0a",
+            "label": "Column Number",
+            "name": "column_number",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "default_value": 2,
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a530b8474e5",
+            "label": "Column Media",
+            "name": "column_images",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "None",
+                "yes": "Images",
+                "icon": "Icons"
+            },
+            "default_value": "no",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a53dcb36d8c",
+            "label": "Column Buttons",
+            "name": "column_links",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "yes": "After Text",
+                "button-end": "End of column"
+            },
+            "default_value": "no",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a62c3f75249",
+            "label": "Intro Headline",
+            "name": "column_headline",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": "no",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a62c917524a",
+            "label": "Intro Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Use &lt;br&gt; to add line return. Add a space before the &lt;br&gt;.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a62c3f75249",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a62cba7524b",
+            "label": "Heading Size",
+            "name": "heading_size",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a62c3f75249",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+            },
+            "default_value": "h3",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a62d037524c",
+            "label": "Heading Alignment",
+            "name": "heading_alignment",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a62c3f75249",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left-text": "Left",
+                "center-text": "Center"
+            },
+            "default_value": "left",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67a52ab17aa0b",
+            "label": "Column 1",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67a530e1474e6",
+            "label": "Column Image",
+            "name": "column_image_1",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "pixel_size",
+            "aspect_ratio_width": 600,
+            "aspect_ratio_height": 400,
+            "return_format": "url",
+            "preview_size": "cdev_post_thumb",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_682ca62398a5e",
+            "label": "Column Icon",
+            "name": "column_icon_1",
+            "aria-label": "",
+            "type": "font-awesome",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "icon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "icon_sets": [
+                "solid",
+                "regular",
+                "brands"
+            ],
+            "custom_icon_set": "",
+            "default_label": "&lt;i class=\"fa-classic fa-solid fa-4 fa-fw\"&gt;&lt;\/i&gt; 4",
+            "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"1\", \"label\" : \"1\", \"unicode\" : \"31\"}",
+            "save_format": "element",
+            "allow_null": 0,
+            "show_preview": 1,
+            "enqueue_fa": 0,
+            "allow_in_bindings": 0,
+            "fa_live_preview": "",
+            "choices": []
+        },
+        {
+            "key": "field_67a53138474e7",
+            "label": "Column Image ALT",
+            "name": "column_image_alt_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Image size 600px X 400px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a52acf7aa0c",
+            "label": "Column Text",
+            "name": "column_1",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_67a53d5b576af",
+            "label": "",
+            "name": "link_1",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a53dcb36d8c",
+                        "operator": "!=",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_64b02bba211dd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_67a52aee7aa0d",
+            "label": "Column 2",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67a53176cc5a2",
+            "label": "Column Image",
+            "name": "column_image_2",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "pixel_size",
+            "aspect_ratio_width": 600,
+            "aspect_ratio_height": 400,
+            "return_format": "url",
+            "preview_size": "cdev_post_thumb",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_682ca68098a5f",
+            "label": "Column Icon",
+            "name": "column_icon_2",
+            "aria-label": "",
+            "type": "font-awesome",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "icon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "icon_sets": [
+                "solid",
+                "regular",
+                "brands"
+            ],
+            "custom_icon_set": "",
+            "default_label": "&lt;i class=\"fa-classic fa-solid fa-4 fa-fw\"&gt;&lt;\/i&gt; 4",
+            "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"2\", \"label\" : \"2\", \"unicode\" : \"32\"}",
+            "save_format": "element",
+            "allow_null": 0,
+            "show_preview": 1,
+            "enqueue_fa": 0,
+            "allow_in_bindings": 0,
+            "fa_live_preview": "",
+            "choices": []
+        },
+        {
+            "key": "field_67a5317ecc5a3",
+            "label": "Column Image ALT",
+            "name": "column_image_alt_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Image size 600px X 400px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a52af57aa0e",
+            "label": "Column Text",
+            "name": "column_2",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_67a53e6933a97",
+            "label": "",
+            "name": "link_2",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a53dcb36d8c",
+                        "operator": "!=",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_64b02bba211dd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_67a53c19a9aa2",
+            "label": "Column 3",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "3"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "4"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "5"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67a53c31a9aa4",
+            "label": "Column Image",
+            "name": "column_image_3",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "pixel_size",
+            "aspect_ratio_width": 600,
+            "aspect_ratio_height": 400,
+            "return_format": "url",
+            "preview_size": "cdev_post_thumb",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_682ca68b98a60",
+            "label": "Column Icon",
+            "name": "column_icon_3",
+            "aria-label": "",
+            "type": "font-awesome",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "icon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "icon_sets": [
+                "solid",
+                "regular",
+                "brands"
+            ],
+            "custom_icon_set": "",
+            "default_label": "&lt;i class=\"fa-classic fa-solid fa-4 fa-fw\"&gt;&lt;\/i&gt; 4",
+            "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"3\", \"label\" : \"3\", \"unicode\" : \"33\"}",
+            "save_format": "element",
+            "allow_null": 0,
+            "show_preview": 1,
+            "enqueue_fa": 0,
+            "allow_in_bindings": 0,
+            "fa_live_preview": "",
+            "choices": []
+        },
+        {
+            "key": "field_67a53c38a9aa5",
+            "label": "Column Image ALT",
+            "name": "column_image_alt_3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Image size 600px X 400px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a53c3fa9aa6",
+            "label": "Column Text",
+            "name": "column_3",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_67a53e7033a98",
+            "label": "",
+            "name": "link_3",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a53dcb36d8c",
+                        "operator": "!=",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_64b02bba211dd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_67a53c25a9aa3",
+            "label": "Column 4",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "4"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "5"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67a53c49a9aa7",
+            "label": "Column Image",
+            "name": "column_image_4",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "pixel_size",
+            "aspect_ratio_width": 600,
+            "aspect_ratio_height": 400,
+            "return_format": "url",
+            "preview_size": "cdev_post_thumb",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_682ca69498a61",
+            "label": "Column Icon",
+            "name": "column_icon_4",
+            "aria-label": "",
+            "type": "font-awesome",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "icon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "icon_sets": [
+                "solid",
+                "regular",
+                "brands"
+            ],
+            "custom_icon_set": "",
+            "default_label": "&lt;i class=\"fa-classic fa-solid fa-4 fa-fw\"&gt;&lt;\/i&gt; 4",
+            "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"4\", \"label\" : \"4\", \"unicode\" : \"34\"}",
+            "save_format": "element",
+            "allow_null": 0,
+            "show_preview": 1,
+            "enqueue_fa": 0,
+            "allow_in_bindings": 0,
+            "fa_live_preview": "",
+            "choices": []
+        },
+        {
+            "key": "field_67a53c52a9aa8",
+            "label": "Column Image ALT",
+            "name": "column_image_alt_4",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Image size 600px X 400px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a53c5aa9aa9",
+            "label": "Column Text",
+            "name": "column_4",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_67a53e7633a99",
+            "label": "",
+            "name": "link_4",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a53dcb36d8c",
+                        "operator": "!=",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_64b02bba211dd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_684f25b35194f",
+            "label": "Column 5",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a52a5c7aa0a",
+                        "operator": "==",
+                        "value": "5"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_684f25c351950",
+            "label": "Column Image",
+            "name": "column_image_5",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "pixel_size",
+            "aspect_ratio_width": 600,
+            "aspect_ratio_height": 400,
+            "return_format": "url",
+            "preview_size": "cdev_post_thumb",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_684f25cf51951",
+            "label": "Column Icon",
+            "name": "column_icon_5",
+            "aria-label": "",
+            "type": "font-awesome",
+            "instructions": "Note: Image size 600px X 400px. Preview is smaller than actual image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "icon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "icon_sets": [
+                "solid",
+                "regular",
+                "brands"
+            ],
+            "custom_icon_set": "",
+            "default_label": "&lt;i class=\"fa-classic fa-solid fa-5 fa-fw\"&gt;&lt;\/i&gt; 5",
+            "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"5\", \"label\" : \"5\", \"unicode\" : \"35\"}",
+            "save_format": "element",
+            "allow_null": 0,
+            "show_preview": 1,
+            "enqueue_fa": 0,
+            "allow_in_bindings": 0,
+            "fa_live_preview": "",
+            "choices": []
+        },
+        {
+            "key": "field_684f25d551952",
+            "label": "Column Image ALT",
+            "name": "column_image_alt_5",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Note: Image size 600px X 400px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a530b8474e5",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_684f25dc51953",
+            "label": "Column Text",
+            "name": "column_5",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_684f25e851954",
+            "label": "",
+            "name": "link_5",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67a53dcb36d8c",
+                        "operator": "!=",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_64b02bba211dd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_67a52a4551892",
+            "label": "Block Options",
+            "name": "block_options",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_675a14013ebca",
+                "group_6399f9fb76246",
+                "group_6792a70e2237e",
+                "group_679a9375148a8",
+                "group_679a79167e96c",
+                "group_6792827d09632"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "cdev\/columns"
+            }
+        ]
+    ],
+    "menu_order": 22,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1775080777
+}

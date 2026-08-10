@@ -1,0 +1,259 @@
+/*	
+  ----------------------------------------------------------------
+  Base - Typography and other classes - included into TinyMCE
+	----------------------------------------------------------------
+*/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $font-stack-headings;
+  color: $font-color-headings;
+  font-weight: $font-weight-headings;
+  margin-block-end: $font-margin-end-headings;
+  padding: 0;
+  font-style: normal !important;
+  text-wrap: balance;
+
+	span {
+		color: $primary-color;
+	}
+}
+
+h1,
+.h1 {
+	font-size: var(--step-7);
+	line-height: var(--lh-step-7);
+	margin: 0;
+}
+
+h2,
+.h2 {
+		font-size: var(--step-6);
+	line-height: var(--lh-step-6);
+	margin-block-start: fluid-clamp(24px, 30px);
+}
+
+h3,
+.h3 {
+	font-size: var(--step-5);
+	line-height: var(--lh-step-5);
+	margin-block-start: fluid-clamp(20px, 24px);
+}
+
+h4,
+.h4 {
+	font-size: var(--step-4);
+	line-height: var(--lh-step-4);
+	font-weight: 700;
+	margin-block-start: fluid-clamp(16px, 20px);
+}
+
+h5,
+.h5 {
+	font-size: var(--step-3);
+	line-height: var(--lh-step-3);
+	font-weight: 700;
+	margin-block-start: fluid-clamp(16px, 20px);
+}
+
+h6,
+.h6 {
+	font-size: var(--step-2);
+	line-height: var(--lh-step-2);
+	font-weight: 700;
+	margin-block-start: fluid-clamp(16px, 20px);
+}
+
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: $font-color-headings;
+	text-decoration: none;
+	font-weight: $font-weight-headings;
+}
+
+/* Mobile */
+@media (max-width: $mobile-break) {
+
+	h1 br,
+	h2 br,
+	h3 br,
+	h4 br,
+	h5 br,
+	h6 br {
+		display: none;
+	}
+
+}
+
+
+
+p {
+	font-size: $font-size-base;
+	line-height: $font-line-height-base;
+	color: $font-color-base;
+	font-family: $font-stack-base;
+	font-weight: normal;
+	margin-block-start: 0;
+	margin-block-end: $spacing-text;
+	text-wrap: pretty;
+}
+
+p.caption,
+p.wp-caption-text,
+.gallery-caption
+ {
+	font-size: 16px !important;
+	line-height: 22px !important;
+	font-weight: normal !important;
+	text-align: center;
+	color: $font-color-caption;
+	font-style: italic;
+	margin-block: 12px 0;
+	margin-inline: auto;
+  max-inline-size: min(100% - 60px, 800px);
+}
+
+
+
+p img {
+	margin: 0;
+}
+
+em,
+i {
+	font-style: italic;
+	line-height: inherit;
+}
+
+strong,
+b {
+	font-weight: bold;
+	line-height: inherit;
+}
+
+small {
+	font-size: 60%;
+	line-height: inherit;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+
+	li {
+		position: relative;
+		margin: 0 0 10px 0;
+		padding: 0;
+	}
+}
+
+
+.cdev_block,
+.mce-content-body {
+
+	ul {
+		margin: 0 0 $spacing-text 0;
+		list-style: none; /* Remove default list style */
+
+		li {
+			font-family: $font-stack-base;
+			font-size: $font-size-base;
+			line-height: $font-line-height-base;
+			color: $font-color-base;
+			position: relative;
+			margin: 0 0 10px 0;
+			padding: 0 0 0 $spacing-text;
+	
+			&::before {
+				content: '\f00c';
+				font-size: 22px;
+				line-height: 1;
+				position: absolute;
+				left: 0;
+				top: 0.15em;
+				color: $primary-color;
+
+				@include awesome-icon;
+			}
+		}
+
+		ul {
+			margin: 10px 0 10px 0;
+			padding: 0;
+		}
+
+	}
+
+	ol {
+		margin: 0 0 $spacing-text 0;
+		list-style: decimal inside;
+		padding: 0;
+
+		li {
+			font-family: $font-stack-base;
+			font-size: $font-size-base;
+			line-height: $font-line-height-base;
+			position: relative;
+			margin: 0 0 5px 0;
+			padding: 0 0 0 0;
+			color: $font-color-base;
+		}
+
+		ol {
+			margin: 10px 0 10px 20px;
+			padding: 0;
+		}
+	}
+
+		
+
+}
+
+
+
+blockquote {
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+blockquote p {
+	padding: 0 0 0 45px;
+	margin: 0 0 16px;
+	font-size: 16px;
+	line-height: 22px;
+	border: none;
+}
+
+img.aligncenter {
+	margin-inline: auto;
+}
+
+@media (max-width: 1140px) {
+	img.alignright {
+		max-width: 40%;
+		height: auto;
+	}
+	img.alignleft {
+		max-width: 40%;
+		height: auto;
+	}
+}

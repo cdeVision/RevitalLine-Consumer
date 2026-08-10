@@ -1,0 +1,36 @@
+/* Spacer Block */
+
+
+.spacer-block {
+
+  &.spacer-small {
+    height: $spacing-content-small;
+  }
+  &.spacer-medium {
+    height: $spacing-content-medium;
+  }
+  &.spacer-large {
+    height: $spacing-content-large;
+  }
+  &.spacer-xlarge {
+    height: $spacing-content-xlarge;
+  }
+}
+
+.block-editor-block-list__block {
+  .spacer-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spacer-block:before {
+    content: "Spacer Block (admin note)";
+    display: block;
+    font-family: $font-stack-base;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 20px;
+    color: #CCC;
+  }
+}

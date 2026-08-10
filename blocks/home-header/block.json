@@ -1,0 +1,38 @@
+{
+    "name": "cdev/home-header",
+    "title": "Home Header",
+    "description": "Page header block",
+    "icon": "star-filled",
+    "category": "cdev-page-banners",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "home-header.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "home_header"
+            }
+        }
+    },
+    "supports": {
+        "anchor": false,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": false,
+        "example": [],
+        "jsx": false,
+        "renaming": false,
+        "removable": false,
+        "createPattern": false,
+        "copy": false,
+        "reusable": false
+    },
+    "script": ["animation-js", "home-slider-js", "home-video-js"]
+}

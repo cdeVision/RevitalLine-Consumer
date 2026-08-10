@@ -1,0 +1,401 @@
+/*
+
+All your awesome Editor Styles go here, we like WYSIWYG
+
+*/
+/* Import Variables */
+body {
+  background: #FFF;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  padding: 10px !important;
+  margin: 0;
+}
+
+body#tinymce {
+  padding: 10px !important;
+}
+
+:root :where(.editor-styles-wrapper) {
+  padding: 0 !important;
+}
+
+/* Base - Body, Headings & Text styles */
+/*	
+  ----------------------------------------------------------------
+  Base - Typography and other classes - included into TinyMCE
+	----------------------------------------------------------------
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444;
+  margin: 30px auto 10px auto;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+  text-align: center;
+}
+
+h1,
+.h1 {
+  font-size: 50px;
+  line-height: 60px;
+  color: #444;
+  font-weight: 700;
+  margin: 30px auto 10px auto;
+}
+
+h2,
+.h2 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #444;
+  font-weight: 700;
+  margin: 30px auto 10px auto;
+}
+
+h3,
+.h3 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #444;
+  font-weight: 700;
+  margin: 30px auto 10px auto;
+}
+
+h4,
+.h4 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #444;
+  font-weight: 700;
+  margin: 30px auto 10px auto;
+}
+
+h5,
+h6 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #444;
+  font-weight: 700;
+  margin: 30px auto 10px auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  h1,
+.h1 {
+    font-size: 44px;
+    line-height: 54px;
+  }
+  h2,
+.h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  h3,
+.h3 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  h4,
+.h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h5,
+h6 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h1 br,
+h2 br,
+h3 br,
+h4 br,
+h5 br,
+h6 br {
+    display: none;
+  }
+}
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+p img {
+  margin: 0;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: square; /* Remove default list style */
+  list-style-position: inside !important;
+}
+
+ul li {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 24px;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.cdev_block ul,
+.mce-content-body ul {
+  list-style: none; /* Remove default list style */
+}
+.cdev_block ul li,
+.mce-content-body ul li {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 20px;
+}
+.cdev_block ul li::before,
+.mce-content-body ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px; /* Adjust to vertically center the bullet */
+  width: 12px; /* Adjust the size of the square */
+  height: 12px; /* Adjust the size of the square */
+  background-color: #333; /* Use the same color as the text */
+  border-radius: 0; /* Adjust the border radius to make it a circle */
+}
+
+ul ul {
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style-position: inside !important;
+}
+
+ol li {
+  margin: 0 0 10px 20px;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+ol ol {
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+blockquote p {
+  padding: 0 0 0 45px;
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+}
+
+p.wp-caption-text {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  padding: 0 20px 0 20px;
+  color: #666;
+  font-style: normal;
+  margin: 0;
+}
+
+.gallery-caption {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  text-align: center !important;
+  padding: 4px 35px 0 10px;
+  color: #666;
+  font-style: normal;
+  margin: 0;
+}
+
+/*	--------------------------------------------------
+	Links
+	-------------------------------------------------- */
+a {
+  color: #464646;
+  line-height: inherit;
+  word-wrap: break-word;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: inherit;
+}
+
+a:visited {
+  line-height: inherit;
+  color: #464646;
+}
+
+a:hover {
+  color: #202020;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+a.box {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+  text-decoration: none;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  position: relative;
+  background: #464646;
+  text-transform: uppercase;
+  transition-duration: 0.25s;
+  border-radius: 6px;
+}
+
+a.box:visited {
+  color: #FFF;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
+a.box:after {
+  font-size: 16px;
+  content: "\f054";
+  padding-left: 6px;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+a.box.back:before {
+  font-size: 16px;
+  content: "\f054";
+  padding-right: 6px;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+a.box.back:after {
+  display: none;
+}
+
+a.box.rev {
+  padding: 0;
+  color: #464646;
+  background: none;
+}
+
+a.box.rev:visited {
+  color: #464646;
+}
+
+a.box.white {
+  color: #FFF;
+}
+
+a.box.white:visited {
+  color: #FFF;
+}
+
+a.box.pdf:after {
+  font-size: 18px;
+  padding-left: 8px;
+  content: "\f1c1";
+}
+
+a.box:hover {
+  color: #FFF;
+  text-decoration: inherit;
+  font-weight: inherit;
+  background: #202020;
+  text-decoration: none !important;
+}
+
+a.box.rev:hover {
+  color: #202020;
+  text-decoration: inherit;
+  font-weight: inherit;
+  background: none;
+}
+
+a.box.white:hover {
+  color: #FFF;
+}
+
+p + p.linkwrap {
+  margin-top: -10px;
+}

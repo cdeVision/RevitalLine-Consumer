@@ -1,0 +1,32 @@
+{
+    "name": "cdev/button",
+    "title": "Button",
+    "description": "Add single button.",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"#000000\" viewBox=\"0 0 256 256\"><path d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\"></path></svg>",
+    "category": "cdev-content-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "button.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "button"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}

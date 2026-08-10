@@ -1,0 +1,170 @@
+/*	
+    --------------------------------------------------
+   	Grid
+	-------------------------------------------------- 
+*/	
+
+
+/* Block layout
+Dmitry Mayorov - Content Width Solutuion
+Video: https://www.youtube.com/watch?v=MQFg2bdSY4Q&list=WL&index=1
+Github: https://github.com/dmtrmrv/demo-content-width/tree/trunk
+*/
+
+html :where(.wp-block) {
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: none;
+}
+.editor-styles-wrapper {
+    padding: 0 !important;
+}
+
+:root {
+	--width--site-gutter: 20px;
+	--width--content: 800px;
+	--width--content--wide: 1230px;
+  --width--content--breakout: 1430px;
+}
+
+.wp-block-post-content > *,
+.block-editor-writing-flow > *,
+.is-layout-flow > *,
+.block_size_none {
+  --width--max: var(--width--content);
+
+  margin-inline: auto;
+  max-inline-size: min(100% - var(--width--site-gutter) * 2, var(--width--max));
+}
+
+
+
+.block_size_wide,
+.inner_alignwide {
+  --width--max: var(--width--content--wide);
+  margin-inline: auto;
+  max-inline-size: min(100% - var(--width--site-gutter) * 2, var(--width--max));
+}
+
+
+
+.block_size_breakout,
+.inner_breakout {
+  --width--max: var(--width--content--breakout);
+  margin-inline: auto;
+  max-inline-size: min(100% - var(--width--site-gutter) * 2, var(--width--max));
+}
+
+.block_size_full,
+.inner_alignfull {
+  max-inline-size: none;
+}
+.full_inner_alignwide {
+  --width--max: var(--width--content--wide);
+  margin-inline: auto;
+  max-inline-size: min(100%, var(--width--max));
+}
+
+
+// /* Page View - Full width block margin bottom */
+// .pagewrap .block_size_full:not(.block_size_full:has(+ .block_size_full)) {
+//   margin-bottom: $spacing-content-large;
+// }
+// /* Admin View - Full width block margin bottom */
+// .wp-block:not(.wp-block:has(+ .wp-block .block_size_full)) {
+//   margin-bottom: $spacing-content-large;
+// }
+
+/* Last block margin bottom */
+.wp-block-post-content > *:last-child,
+.block-editor-writing-flow > *:last-child {
+  margin-bottom: $spacing-content-xlarge;
+}
+
+/* Last block if full width no margin bottom */
+.wp-block-post-content > .block_size_full:last-child,
+.block-editor-writing-flow > .block_size_full:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Columns */
+.columns {
+  --grid-max-col-count: 2;
+  --grid-min-col-size: 200px;
+  --grid-gap: 30px;
+
+  /* calculations, do not touch */
+  --grid-col-size-calc: calc(
+    (100% - var(--grid-gap) * var(--grid-max-col-count)) /
+      var(--grid-max-col-count)
+  );
+  --grid-col-min-size-calc: min(
+    100%,
+    max(var(--grid-min-col-size), var(--grid-col-size-calc))
+  );
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-col-min-size-calc), 1fr)
+  );
+  gap: 0 var(--grid-gap);
+
+  &.colnum-2 {
+    --grid-max-col-count: 2;
+  }
+  &.colnum-3 {
+    --grid-max-col-count: 3;
+  }
+  &.colnum-4 {
+    --grid-max-col-count: 4;
+  }
+  &.colnum-5 {
+    --grid-max-col-count: 5;
+  }
+}
+
+/* Flexible content small */
+.flexible-content-small {
+  
+  .columns.colnum-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+    @media (max-width: 940px ) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+}
+
+/* Buttons at and of column */
+.col.button-end {
+  position: relative;
+  padding-bottom: 30px;
+
+  @media (max-width: $mobile-break) {
+        padding-bottom: 0;
+  }
+
+  p.linkwrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: $mobile-break) {
+        position: relative;
+    }
+  }
+
+
+}
+
+/* Block editor block list div */
+.block-editor-block-list__block {
+  max-inline-size: 100%;
+}
+
+/* Block editor footer height */
+:root :where(.editor-styles-wrapper)::after {
+  max-height: 200px !important;
+}

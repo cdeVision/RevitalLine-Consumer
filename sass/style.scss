@@ -1,0 +1,106 @@
+/*
+Theme Name: RevitalLine - Consumer
+Theme URI: http://cdevision.com/
+Author: cdeVision
+Author URI: http://cdevision.com/
+Description: Custom theme for RevitalLine - Consumer
+Version: 7.3
+License: No copy or resale
+License URI: http://cdevision.com/
+Text Domain: RevitalLine - Consumer
+Tags: 
+*/
+
+// Import Variables
+@import 'variables';
+
+// Normalize - Reset CSS OLD
+// @import 'normalize';
+
+// Reset CSS
+@import 'css-reset';
+
+
+/*	
+    --------------------------------------------------
+    Body
+	--------------------------------------------------
+*/
+
+@view-transition {
+	navigation: auto;
+}
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #FFF;
+	font-size: $font-size-base;
+	line-height: $font-line-height-base;
+	color: $font-color-base;
+	font-family: $font-stack-base;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+#skipnav {
+	display: none;
+}
+
+// Base Grid
+@import 'grid';
+
+// Base - Body, Headings & Text styles
+@import 'base';
+
+// Links - Site links and buttons
+@import 'links';
+
+// Misc - Alignments, widgets, gallery, etc
+@import 'misc';
+
+// Header
+@import 'header';
+
+// Nav Bar - Desk
+@import 'nav-desk';
+
+// Nav Bar - Mobile
+@import 'nav-mobile';
+
+// Home
+@import 'home';
+
+// Content
+@import 'content';
+
+// Blocks
+@import 'blocks';
+
+// Blocks Main
+@import '../blocks/blocks';
+
+// Sidebar
+@import 'sidebar';
+
+// Blog/News
+@import 'blog';
+
+// Pager
+@import 'pager';
+
+// Footer
+@import 'footer';
+
+// Forms - Gravity Forms */
+@import 'forms-gravity-forms';
+
+// Search
+@import 'search';
+
+// Print Styles */
+@import 'print';

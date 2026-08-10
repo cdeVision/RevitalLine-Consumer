@@ -1,0 +1,58 @@
+{
+    "key": "group_679bdf7067969",
+    "title": "Options - Theme Color",
+    "fields": [
+        {
+            "key": "field_679bdf706e899",
+            "label": "Block Color",
+            "name": "block_theme_color",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block_theme_color_1": "Green",
+                "block_theme_color_2": "Black"
+            },
+            "default_value": "block_theme_color_1",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "cdev\/column-one"
+            }
+        ]
+    ],
+    "menu_order": 62,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1775509595
+}

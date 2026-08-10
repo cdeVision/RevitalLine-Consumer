@@ -1,0 +1,32 @@
+{
+    "name": "cdev/home-elevator",
+    "title": "Home Elevator",
+    "description": "A block that displays a home elevator.",
+    "icon": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 257.73 256\"><rect x=\"1\" width=\"32\" height=\"32\" fill=\"none\" stroke-width=\"0\"/><path d=\"m11.2,84h103.97c2.87,0,5.2,1.79,5.2,4v80c0,2.21-2.33,4-5.2,4H11.2c-2.87,0-5.2-1.79-5.2-4v-80c0-2.21,2.33-4,5.2-4Z\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"12\"/><line x1=\"155.67\" y1=\"93.5\" x2=\"251.73\" y2=\"93.5\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"12\"/><line x1=\"155.67\" y1=\"115.33\" x2=\"225.53\" y2=\"115.33\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"12\"/><line x1=\"155.67\" y1=\"137.17\" x2=\"251.73\" y2=\"137.17\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"12\"/><line x1=\"155.67\" y1=\"159\" x2=\"225.53\" y2=\"159\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"12\"/></svg>",
+    "category": "cdev-page-banners",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "home-elevator.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "home_elevator"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}

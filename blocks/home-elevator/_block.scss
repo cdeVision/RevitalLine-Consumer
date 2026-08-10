@@ -1,0 +1,95 @@
+
+/*	Home Elevator Box  */
+
+.home-elevator-wrap {
+    padding-block: $spacing-content-large $spacing-content-medium;
+    @media (max-width: $mobile-break) {
+        padding-block: $spacing-content-medium;
+    }
+}
+
+.home-elevator {
+    display: flex;
+    min-height: 350px;
+
+    // media on left (default): text on right → text-inner aligns to left edge of content
+    .text-inner {
+        max-width: calc(#{$block-wide} / 2);
+        margin-right: auto;
+        padding-left: px-rem(60px);
+        padding-right: 20px;
+    }
+
+    // media on right: text on left → text-inner aligns to right edge of content
+    &.right {
+        flex-direction: row-reverse;
+
+        .text-inner {
+            margin-right: 0;
+            margin-left: auto;
+            padding-left: 20px;
+            padding-right: px-rem(60px);
+        }
+    }
+
+    // ── Text column ──────────────────────────────────────────────
+    .text {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        padding-block: $spacing-content-large;
+    }
+
+    // ── Media column ─────────────────────────────────────────────
+    .media {
+        flex: 0 0 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center left;
+            display: block;
+        }
+    }
+
+    // ── Responsive ────────────────────────────────────────────────
+
+
+    @media (max-width: 900px) {
+        flex-direction: column !important;
+        min-height: 0;
+
+        .text {
+            flex: 1 1 0 !important;
+            width: 100%;
+            padding: $spacing-content-small 0 20px 0;
+        }
+
+        .text-inner {
+            max-width: 100%;
+            margin-inline: 0;
+            padding-inline: 20px;
+        }
+
+        &.right .text-inner {
+            margin-inline: 0;
+            padding-inline: 20px;
+        }
+
+        .media {
+            flex: 1 1 0 !important;
+            width: 100%;
+            min-height: 350px;
+            padding-left: 30px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .media {
+            min-height: 250px;
+        }
+    }
+}

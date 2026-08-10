@@ -1,0 +1,39 @@
+{
+    "name": "cdev/page-header",
+    "title": "Page Header",
+    "description": "Page header block",
+    "icon": "star-filled",
+    "category": "cdev-page-banners",
+    "usesContext": ["postId", "postType"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "page-header.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "page_header"
+            }
+        }
+    },
+    "supports": {
+        "anchor": false,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": false,
+        "example": [],
+        "jsx": false,
+        "renaming": false,
+        "removable": false,
+        "createPattern": false,
+        "copy": false,
+        "reusable": false
+    },
+    "script": ["animation-js", "banner-slider-js", "banner-video-js"]
+}

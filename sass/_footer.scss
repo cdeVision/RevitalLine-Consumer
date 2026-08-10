@@ -1,0 +1,239 @@
+/*	--------------------------------------------------
+   	Footer
+	-------------------------------------------------- */
+
+// Full-width footer CTA bar (above #colophon)
+$footer-cta-bg: $primary-color;
+$footer-cta-bg-hover: $secondary-color;
+
+.cta {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 30px var(--width--site-gutter);
+	background-color: $footer-cta-bg;
+	color: #fff !important;
+	font-family: $font-stack-base;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none !important;
+	transition: background-color 0.2s ease;
+
+	&:hover,
+	&:focus {
+		background-color: $footer-cta-bg-hover;
+		color: #fff !important;
+		text-decoration: none !important;
+	}
+
+	&:visited {
+		color: #fff !important;
+	}
+
+	.cta__inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		column-gap: px-rem(36px);
+		row-gap: px-rem(16px);
+		margin-inline: auto;
+		max-inline-size: 100%;
+		text-align: left;
+	}
+
+	// Icon + headline sit tight; larger space before subtext (column-gap on .cta__inner).
+	.cta__lead {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		column-gap: px-rem(12px);
+		flex: 0 1 auto;
+	}
+
+	.cta__icon {
+		flex: 0 0 auto;
+		font-size: 60px;
+		line-height: 1;
+
+		.fa-solid {
+			display: block;
+			font-weight: 900;
+		}
+	}
+
+	.cta__title {
+		font-size: var(--step-4);
+		font-weight: 800;
+		line-height: var(--lh-step-4);
+		color: inherit;
+	}
+
+	.cta__text {
+		flex: 1 1 220px;
+		max-width: 320px;
+		font-size: var(--step-0);
+		font-weight: 400;
+		line-height: var(--lh-step-0);
+		color: inherit;
+	}
+
+	@media (max-width: $mobile-break) {
+		padding-top: px-rem(24px);
+		padding-bottom: px-rem(24px);
+
+		.cta__inner {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.cta__lead {
+			justify-content: center;
+		}
+
+		.cta__text {
+            flex: 1 1 auto;
+			max-width: none;
+		}
+
+        .cta__icon {
+            font-size: 40px;
+        }
+	}
+
+	@media (max-width: 525px) {
+		.cta__lead {
+			flex-direction: column;
+			column-gap: 0;
+			row-gap: px-rem(10px);
+			align-items: center;
+			text-align: center;
+		}
+
+		.cta__title {
+			text-align: center;
+		}
+	}
+}
+
+#colophon {
+    padding: 60px 0 100px 0;
+}
+
+
+
+.footer-branding {
+	width: 195px;
+	height: 55px;
+    margin-bottom: 20px;
+}
+.footer-branding__title {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.footer-branding__title a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-indent: -4000px;
+	background: $logo-background;
+    background-size: contain;
+}
+
+.footercolumns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 0 50px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Association logos */
+.assoc {
+    margin-left: auto;
+    @media (max-width: 800px) {
+        margin-left: 0;
+        flex: 0 0 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+
+        @media (max-width: 600px) {
+
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        li {
+            list-style: none;
+            margin: 0;
+        }
+        a {
+            transition-duration: 0.25s;
+        }
+        a:hover {
+            opacity: 0.6;
+        }
+        img {
+            max-width: 140px;
+            max-height: 80px;
+            height: auto;
+            width: auto;
+        }
+
+    }
+    
+}
+
+
+
+.site-footer {
+	background: $color5;
+	color: #FFF;
+
+    p {
+        color: #FFF;
+    }
+    a {
+        color: $primary-color;
+        text-decoration: none !important;
+        font-weight: 400;
+    }
+    a:hover {
+        color: $primary-color;
+        text-decoration: underline !important;
+    }
+
+    .site-info {
+        a {
+            color: #FFF;
+        }
+        a:hover {
+            color: #FFF;
+        }
+    }
+}

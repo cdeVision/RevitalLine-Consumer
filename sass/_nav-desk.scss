@@ -1,0 +1,139 @@
+/*	--------------------------------------------------
+   	Nav Bar - Desk
+	-------------------------------------------------- */
+
+.primary-navigation {
+	position: absolute;
+	bottom: 12px;
+	right: 0;
+}
+
+.primary-navigation .wrap {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.primary-menu {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+.primary-menu .menu-item {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	list-style: none;
+}
+
+.primary-menu .menu-item a {
+	display: block;
+	font-size: 18px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0 15px;
+	text-decoration: none;
+	color: #FFF;
+	font-family: $font-stack-base;
+	font-style: normal;
+	font-weight: 800;
+	text-transform: uppercase;
+
+	@media (max-width: 1200px) {
+		font-size: 16px;
+		padding: 0 10px;
+	}
+}
+
+.primary-menu .menu-item.rep a {
+	margin-left: 15px;
+	@media (max-width: 1200px) {
+		margin-left: 10px;
+	}
+}
+
+.primary-menu > .menu-item:first-child {
+	display: none;
+}
+
+.primary-menu .menu-item:last-child:not(.rep) a {
+	padding-right: 0;
+}
+
+.primary-menu .menu-item.current_page_item:not(.rep)>a,
+.primary-menu .menu-item.current-menu-item:not(.rep)>a,
+.primary-menu .menu-item.current-post-ancestor:not(.rep)>a,
+.primary-menu .menu-item.current-category-ancestor:not(.rep)>a,
+.primary-menu .menu-item.current_page_ancestor:not(.rep)>a {
+	color: $primary-color;
+}
+
+.primary-menu .menu-item:not(.rep):hover>a {
+	color: $primary-color;
+}
+
+.primary-menu .sub-menu {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	min-width: 200px;
+	margin: 0;
+	padding: 0;
+	background: #333;
+	padding: 0;
+}
+
+.primary-menu .menu-item:last-child .sub-menu {
+	left: auto;
+	right: 0;
+}
+
+/*.menu-desk > ul > li:hover > ul { display:block; }*/
+.primary-menu .sub-menu .menu-item {
+	padding: 0;
+	margin: 0;
+}
+
+.primary-menu .menu-item .sub-menu .menu-item a {
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: $font-stack-base;
+	font-style: normal;
+	font-weight: 700;
+	padding: 5px 15px;
+	color: #FFF;
+	background: none;
+	white-space: nowrap;
+}
+
+.primary-menu .sub-menu .menu-item:first-child a {
+	padding-top: 12px;
+}
+
+.primary-menu .sub-menu .menu-item:last-child a {
+	padding-bottom: 12px;
+}
+
+.primary-menu .menu-item .sub-menu .menu-item a:hover {
+	color: #FFF;
+	opacity: 0.6;
+}
+
+.primary-menu .menu-item .sub-menu .menu-item.current-menu-item>a {
+	color: #FFF;
+	opacity: 0.6;
+}
+
+
+
+@media (max-width: $menu-hide) {
+
+	.primary-navigation {
+		display: none;
+	}
+
+}

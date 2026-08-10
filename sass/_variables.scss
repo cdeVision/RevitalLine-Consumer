@@ -1,0 +1,191 @@
+// Sass Variables File ///////////////////////////////////////
+
+/*
+AFTER SETTING UP VARIABLES FOR A NEW PROJECT:
+Copy the prompt below into Copilot Chat to update the AI doc files:
+
+---
+Read sass/_variables.scss, style.css (theme header), and gulpfile.js (proxy URL).
+Then update AI_PROJECT_OVERVIEW.md:
+- Theme name (title + description)
+- All color variables and descriptions
+- Font families, weights, and base colors
+- Fluid typography step range
+- Proxy URL
+- Remove the TODO placeholder note if present
+Also update the theme name/description in AGENTS.md.
+---
+
+*/
+
+
+// Colors
+
+$primary-color: #4FA852; //  LT Green
+$secondary-color: #2D5528; // DK Green
+$color3: #777777; // Gray
+$color4: #CCC; // LT gray box stroke
+$color5: #0E0E0E; // DK Gray footer background
+
+$block_backgound_light: $primary-color;
+$block_backgound_dark: $color5;
+
+$theme_color_1: $primary-color;
+$theme_color_2: $color5;
+$theme_color_3: $color5;
+
+
+// Branding
+
+$masthead-height: 140px;
+
+$logo-background: url(images/logo.png) no-repeat;
+$logo-width: 275px;
+$logo-height: 79px;
+
+$logo-mob-width: 260px;
+$logo-mob-height: 75px;
+
+$border-radius: 0;
+
+
+// Base Typography
+// https://use.typekit.net/dsd3vmx.css
+// font-family: "acumin-pro", sans-serif;
+
+// Icons
+$font-stack-awesome-free: 'Font Awesome 6 Free';
+$font-stack-awesome-brands: 'Font Awesome 6 Brands';
+
+
+
+
+// Base Font Size
+$base-font-size: 16px;
+
+// Function to convert px to rem
+@function px-rem($px) {
+  @if unit($px) == "px" {
+    @return calc($px / $base-font-size) * 1rem;
+  }
+  @return $px; // Return unchanged if not px
+}
+
+// Function to convert rem to px
+@function rem-px($rem) {
+  @if unit($rem) == "rem" {
+    @return calc($rem * $base-font-size) * 1px;
+  }
+  @return $rem; // Return unchanged if not rem
+}
+
+// Fluid clamp function
+@function fluid-clamp($min, $max) {
+  $viewport-min: 500px;
+  $viewport-max: 1230px;
+  $slope: calc(($max - $min) / ($viewport-max - $viewport-min));
+  $intercept: calc($min - ($slope * $viewport-min));
+
+  @return clamp(#{$min}, #{$intercept} + #{$slope} * 100vw, #{$max});
+}
+
+
+// Font sizes - Fluid Typography
+/* @link https://utopia.fyi/type/calculator?c=600,16,1.125,1230,18,1.1504,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.7901rem, 0.733rem + 0.1522vw, 0.8501rem);
+  --step--1: clamp(0.8889rem, 0.8041rem + 0.2261vw, 0.9779rem);
+  --step-0: clamp(1rem, 0.881rem + 0.3175vw, 1.125rem);
+  --step-1: clamp(1.125rem, 0.9639rem + 0.4297vw, 1.2942rem);
+  --step-2: clamp(1.2656rem, 1.053rem + 0.5669vw, 1.4888rem);
+  --step-3: clamp(1.4238rem, 1.1486rem + 0.7338vw, 1.7128rem);
+  --step-4: clamp(1.6018rem, 1.2508rem + 0.936vw, 1.9704rem);
+  --step-5: clamp(1.802rem, 1.3595rem + 1.1801vw, 2.2667rem);
+  --step-6: clamp(2.0273rem, 1.4746rem + 1.4739vw, 2.6076rem);
+  --step-7: clamp(2.2807rem, 1.5958rem + 1.8263vw, 2.9998rem);
+  --step-8: clamp(2.5658rem, 1.7227rem + 2.2481vw, 3.451rem);
+}
+
+// Line heights
+:root {
+  --lh-step--2: calc(var(--step--2) * 1.4);
+  --lh-step--1: calc(var(--step--1) * 1.4);
+  --lh-step-0: calc(var(--step-0) * 1.45);
+  --lh-step-1: calc(var(--step-1) * 1.4);
+  --lh-step-2: calc(var(--step-2) * 1.4);
+  --lh-step-3: calc(var(--step-3) * 1.3);
+  --lh-step-4: calc(var(--step-4) * 1.2);
+  --lh-step-5: calc(var(--step-5) * 1.2);
+  --lh-step-6: calc(var(--step-6) * 1.2);
+  --lh-step-7: calc(var(--step-7) * 1.2);
+  --lh-step-8: calc(var(--step-8) * 1.2);
+}
+
+
+// Font Awesome Mixins
+@mixin awesome-icon {
+  font-weight: 900;
+  font-family: $font-stack-awesome-free;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+@mixin awesome-brand {
+  font-weight: 400;
+  font-family: $font-stack-awesome-brands;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Base Typography
+$font-stack-base: "acumin-pro", sans-serif;
+$font-color-base: #3A3A3A;
+$font-size-base: var(--step-0);
+$font-line-height-base: var(--lh-step-0);
+
+$font-size-intro: var(--step-1);
+$font-line-height-intro: var(--lh-step-1);
+
+$font-size-small: var(--step--2);
+$font-line-height-small: var(--lh-step--2);
+
+$font-color-caption: #666;
+
+$spacing-text: 26px;
+
+
+// Headings general settings
+$font-stack-headings: "acumin-pro", sans-serif;
+$font-color-headings: $color5;
+$font-weight-headings: 800;
+$font-margin-headings: 30px 0 10px 0;
+$font-margin-end-headings: 10px;
+
+
+// Links
+
+$link-color-main: $primary-color;
+$link-color-main-hover: $secondary-color;
+
+// Spacing
+
+$spacing-content-small: 30px;
+$spacing-content-medium: 50px;
+$spacing-content-large: 80px;
+$spacing-content-xlarge: 100px;
+
+
+// Break Points
+
+$mobile-break: 767px;
+$tablet-break: 1120px;
+$menu-hide: 1080px;
+
+
+// Layout
+
+$site-gutter: 20px;
+$block-normal: 800px;
+$block-wide: 1230px;

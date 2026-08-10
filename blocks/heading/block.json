@@ -1,0 +1,32 @@
+{
+    "name": "cdev/heading",
+    "title": "Heading",
+    "description": "Heading block with custom styles",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"#000000\" viewBox=\"0 0 256 256\"><path d=\"M208,56V200a8,8,0,0,1-16,0V136H64v64a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0v64H192V56a8,8,0,0,1,16,0Z\"></path></svg>",
+    "category": "cdev-content-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "heading.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "heading"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "key": "group_6792827d09632",
+    "title": "Options - Block Background",
+    "fields": [
+        {
+            "key": "field_6792827d0e137",
+            "label": "Background Color",
+            "name": "block_background",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": " button_block_background",
+                "id": ""
+            },
+            "choices": {
+                "block_background_none": "None",
+                "block_background_light": "Green",
+                "block_background_dark": "Black"
+            },
+            "default_value": "block_background_none",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "cdev\/column-one"
+            }
+        ]
+    ],
+    "menu_order": 61,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1775509565
+}

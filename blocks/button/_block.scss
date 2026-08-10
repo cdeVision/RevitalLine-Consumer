@@ -1,0 +1,18 @@
+/* Button Block */
+
+
+.button-block {
+  margin-top: -10px;
+  margin-bottom: $spacing-text;
+
+  &.center {
+    text-align: center;
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+
+}

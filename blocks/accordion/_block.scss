@@ -1,0 +1,117 @@
+/* Accordion Block with inner blocks */
+
+
+
+$accordion-margin-bottom: 50px;
+$accordion-padding: 10px;
+$accordion-border-color: lighten($font-color-base, 60%);
+$accordion-icon-size: 16px;
+$accordion-icon-line-height: 30px;
+$accordion-icon-weight: 900;
+$accordion-title-font-size: 18px;
+$accordion-title-line-height: 30px;
+$accordion-title-padding-left: 8px;
+$accordion-title-font-weight: 700;
+$accordion-content-padding: 20px 14px 1px 14px;
+$accordion-content-mobile-padding: 20px 0 1px 0;
+$accordion-content-margin: 0;
+$accordion-ul-margin-left: 30px;
+
+.accordion__wrap {
+  margin-bottom: -1px;
+}
+
+/* Page view - If this accordion is immediately followed by another accordion, keep -1px margin */
+.pagewrap .accordion__wrap:not(.accordion__wrap:has(+ .accordion__wrap)) {
+  margin-bottom: $accordion-margin-bottom;
+}
+
+/* Editor view - Target .wp-block-cdev-accordion that is NOT followed by another .wp-block-cdev-accordion */
+.wp-block-cdev-accordion:not(.wp-block-cdev-accordion:has(+ .wp-block-cdev-accordion)) {
+  .accordion__wrap {
+    margin-bottom: $accordion-margin-bottom;
+  }
+}
+
+.accordion-wrap {
+  border-top: 1px solid $accordion-border-color;
+}
+
+.accordiontitle {
+  display: flex;
+  padding: $accordion-padding;
+  border-bottom: 1px solid $accordion-border-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .fa-solid {
+    font-size: $accordion-icon-size;
+    line-height: $accordion-icon-line-height;
+    font-weight: $accordion-icon-weight;
+    color: $primary-color;
+    float: left;
+    margin: 0;
+  }
+
+  &:hover .fa-solid {
+    color: $font-color-base;
+  }
+
+  &.open .closedicon {
+    display: none;
+  }
+
+  &.open .openicon {
+    display: block;
+  }
+
+  .openicon {
+    display: none;
+  }
+
+  h3 {
+    font-family: $font-stack-base;
+    line-height: $accordion-title-line-height;
+    font-size: $accordion-title-font-size;
+    color: $font-color-headings;
+    padding-left: $accordion-title-padding-left;
+    margin: 0;
+    font-weight: $accordion-title-font-weight;
+    text-transform: none;
+  }
+
+  &:hover h3 {
+    color: $font-color-base;
+  }
+
+}
+
+.accordioncontent {
+  display: none;
+  padding: $accordion-content-padding;
+  margin: $accordion-content-margin;
+
+  .acf-innerblocks-container > *:first-child {  // clear margin top & bottom
+    margin-top: 0;
+  }
+  .acf-innerblocks-container .block-editor-block-list__block > *:first-child {  // clear margin top & bottom
+    margin-top: 0;
+  }
+  .acf-innerblocks-container > *:last-child {  // clear margin top & bottom
+    margin-bottom: 0;
+  }
+  .acf-innerblocks-container .block-editor-block-list__block > *:last-child {  // clear margin top & bottom
+    margin-bottom: 0;
+  }
+
+
+  ul {
+    margin-left: $accordion-ul-margin-left;
+  }
+
+  @media (max-width: $mobile-break) {
+    padding: $accordion-content-mobile-padding;
+  }
+}

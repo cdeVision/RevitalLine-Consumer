@@ -1,0 +1,111 @@
+{
+    "key": "group_6399f9fb76246",
+    "title": "Options - Padding Top & Bottom",
+    "fields": [
+        {
+            "key": "field_678972ae05a3c",
+            "label": "",
+            "name": "block_padding",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
+            "sub_fields": [
+                {
+                    "key": "field_6399f9fb29974",
+                    "label": "Padding Before",
+                    "name": "block_padding_before",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "block_pad_before_zero": "None",
+                        "block_pad_before_none": "default",
+                        "block_pad_before_small": "Small",
+                        "block_pad_before_med": "Medium",
+                        "block_pad_before_large": "Large"
+                    },
+                    "default_value": "block_pad_before_none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_6399fa7e29975",
+                    "label": "Padding After",
+                    "name": "block_padding_after",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "block_pad_after_zero": "None",
+                        "block_pad_after_none": "Default",
+                        "block_pad_after_small": "Small",
+                        "block_pad_after_med": "Medium",
+                        "block_pad_after_large": "Large"
+                    },
+                    "default_value": "block_pad_after_none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "layout": "horizontal"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 9,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1775080775
+}

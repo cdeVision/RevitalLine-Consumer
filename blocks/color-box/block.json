@@ -1,0 +1,32 @@
+{
+    "name": "cdev/color-box",
+    "title": "Color Box",
+    "description": "Color box with image and text",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"#000000\" viewBox=\"0 0 256 256\"><path d=\"M216,80H40A16,16,0,0,0,24,96v64a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V96A16,16,0,0,0,216,80ZM40,96H80v64H40ZM216,160H96V96H216v64Z\"></path></svg>",
+    "category": "cdev-content-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "color-box.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "color_box"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}

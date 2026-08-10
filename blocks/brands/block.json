@@ -1,0 +1,32 @@
+{
+    "name": "cdev/brands",
+    "title": "Brands",
+    "description": "Brand post types displayed in a grid.",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"#000000\" viewBox=\"0 0 256 256\"><path d=\"M240,188H224V104a16,16,0,0,0-16-16H152V72a16,16,0,0,0-16-16H48A16,16,0,0,0,32,72V188H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM152,104h56V188H152Zm-16-32V188H48V72Z\"></path></svg>",
+    "category": "cdev-content-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "brands.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "brands"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}

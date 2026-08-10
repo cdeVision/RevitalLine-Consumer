@@ -1,0 +1,19 @@
+/* Video Block */
+
+.image-block {
+    margin-block: $spacing-content-xlarge;
+
+    @media (max-width: $mobile-break) {
+        margin-block: $spacing-content-medium;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+
+}
+

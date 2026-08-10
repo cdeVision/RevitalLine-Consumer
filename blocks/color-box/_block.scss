@@ -1,0 +1,55 @@
+
+/*	Hero Block - Image and Text  */
+
+.color-box {
+    display: flex;
+    margin-block: $spacing-content-large;
+    border-radius: $border-radius;
+    min-height: 285px;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &.block_size_breakout {
+        .image {
+            flex: 0 0 min(385px, 50%);
+        }
+    }
+    &.block_size_wide {
+        .image {
+            flex: 0 0 min(285px, 50%);
+        }
+    }
+    &.block_size_none {
+        .image {
+            flex: 0 0 min(285px, 50%);
+        }
+    }
+
+    
+
+    .text {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+
+    @media (max-width: $mobile-break) {
+        flex-direction: column;
+        width: 600px;
+        max-width: calc(100% - 40px);
+        margin-inline: auto;
+        .image {
+            flex: 0 0 100% !important;
+        }
+        .text {
+            padding: 20px;
+        }
+
+    }
+}

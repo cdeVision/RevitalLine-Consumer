@@ -1,0 +1,285 @@
+/*	--------------------------------------------------
+	Misc
+	-------------------------------------------------- */
+
+
+/* Utility classes */
+
+/* Clear Margins and padding */
+
+.no-pad {
+    padding:0;
+}
+
+.no-margin {
+	margin:0;
+}
+
+.no-margin-top {
+	margin-top:0;
+}
+
+/* Clear Child Margins */
+
+.clear-top > *:first-child {  // clear margin top
+    margin-top: 0;
+}
+
+.clear-bottom > *:last-child {  // clear margin bottom
+    margin-bottom: 0;
+}
+
+.clear-both > *:first-child {  // clear margin top & bottom
+    margin-top: 0;
+}
+.clear-both > *:last-child {  // clear margin top & bottom
+    margin-bottom: 0;
+}
+
+.small-text {
+    font-size: $font-size-small;
+    line-height: $font-line-height-small;
+
+    p {
+        font-size: $font-size-small;
+        line-height: $font-line-height-small;
+    }
+
+}
+.x-small-text {
+    font-size: 12px;
+    line-height: 20px;
+
+    p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+}
+
+.white-text {
+    color:#fff !important;
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p,
+    ul,
+    a {
+        color: #FFF !important;
+    }
+    a:not(a.box):not(.social a) {
+        color: #FFF;
+        text-decoration: underline !important;
+    }
+    a:hover:not(a.box),
+    a:visited:not(a.box) {
+        color: #FFF;
+        text-decoration: underline !important;
+        opacity: 0.6;
+    }
+    ul li {
+        list-style: url(images/bullet_white.png);
+    }
+}
+
+.center-text {
+	text-align: center;
+}
+
+.screen-reader-text {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.clearfloats {
+	clear: both;
+	line-height: 0px;
+	height: 0px;
+	font-size: 0px;
+}
+
+
+
+div[id*='gallery-'] {
+	margin: 20px 0 20px 0 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.two div[id*='gallery-'] {
+    grid-template-columns: 1fr 1fr;
+}
+.accordiancontent div[id*='gallery-'] {
+	margin: 30px 0 !important;
+}
+div[id*='gallery-'] .gallery-item {
+	margin: 0 !important;
+}
+.gallery-item {
+	margin: 0 !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
+.gallery br {
+    display: none !important;
+}
+
+/* Mobile */
+@media (max-width: $mobile-break) {
+    div[id*='gallery-'] {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+
+div[id*='gallery-'] img {
+    border: none !important;
+	max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+div[id*='gallery-'] img:hover {
+    opacity: 0.8;
+}
+
+
+
+img[class*="wp-image-"] {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Images sizes */
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.alignleft {
+	float: left;
+	margin: 4px 30px 20px 0 !important;
+	display: block;
+}
+.alignright {
+	float: right;
+	margin: 4px 0 20px 30px !important;
+	display: block;
+}
+
+.widget {
+	margin-bottom:0;
+	margin-top:0;
+}
+
+.wp-caption {
+	padding:0;
+	border:none;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+    .alignleft {
+        max-width: 40% !important;
+        height: auto;
+    }
+    .alignright {
+        max-width: 40% !important;
+        height: auto;
+    }
+    .main-content-inner img {
+        max-width: 100%;
+        height: auto;
+    } 
+}
+
+@media (max-width: 767px) {
+    .attachment-thumbnail {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+.fancybox-skin {
+    -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+       -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+.fancybox-toolbar {
+    right: auto !important;
+    left: 0;
+    top: 0;
+}
+    
+    
+
+/* Object Fit Image */
+
+.object-fit-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+.object-fit-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+/* Base animation setup */
+.has-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+  
+/* Make visible when in viewport */
+.has-animation.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+  
+/* Fade-in (default) */
+.fade-in {
+    transform: translateY(0);
+}
+  
+/* Fade-up */
+.fade-up {
+    transform: translateY(40px);
+}
+  
+/* Fade-left */
+.fade-left {
+    transform: translateX(-40px);
+}
+  
+/* Fade-right */
+.fade-right {
+    transform: translateX(40px);
+}
+
+  

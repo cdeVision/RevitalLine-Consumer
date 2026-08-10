@@ -1,0 +1,61 @@
+
+/*	One Column Block  */
+
+
+.block_callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .callout_content {
+    flex: 0 0 390px;
+    padding-bottom: 30px;
+    margin-inline: auto;
+
+    @media (max-width: 1020px) {
+      flex: 1 1 0;
+    }
+
+    p {
+      font-family: $font-stack-headings;
+      font-weight: $font-weight-headings;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+      .callout_quote_wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        
+        p {
+          margin-bottom: 10px;
+        }
+        p.quote-by {
+          font-size: $font-size-base;
+          line-height: $font-line-height-base;
+          font-style: italic;
+          text-align: right;
+          font-weight: normal;
+          margin: 0;
+        }
+
+        .fa {
+          font-size: var(--step-4);
+          color:$block_backgound_light;
+        }
+      }
+
+  }
+
+  .callout_image {
+    padding-block: $spacing-content-large;
+  }
+
+}

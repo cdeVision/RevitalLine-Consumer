@@ -1,0 +1,78 @@
+{
+    "key": "group_677ee9ae24efc",
+    "title": "Include Scripts",
+    "fields": [
+        {
+            "key": "field_677ee9af82aea",
+            "label": "Head Scripts",
+            "name": "head_scripts",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Note: Enter code to be placed in the website head section. Example: Google Analytics, Facebook Pixel or javascript",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 1,
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 15,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_677eeb85eb7d4",
+            "label": "Footer Scripts",
+            "name": "footer_scripts",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Note: Enter code to be placed in the website footer section before the closing body tag. Example: Google Analytics Event Tracking or javascript.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 1,
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 15,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header-footer-scripts"
+            }
+        ]
+    ],
+    "menu_order": 36,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1775080779
+}

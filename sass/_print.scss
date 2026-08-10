@@ -1,0 +1,63 @@
+/*	--------------------------------------------------
+	Print
+	-------------------------------------------------- */
+
+
+.showprint {
+    display: none;
+}
+
+@media print {
+    
+    body {
+        padding: 20px !important;
+    }
+    
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .showprint {
+        display: block;
+    }
+
+    .hideprint {
+        display: none;
+    }
+    
+    .printlogo {
+        margin: 15px 0;
+    }
+    
+    .header-pad {
+        display: none;
+    }
+    
+    .page-header {
+        margin: 0;
+        padding: 0;
+    }
+    .page-header .wrap {
+        display: block;
+        height: auto;
+    }
+    .page-header h1 {
+        color: #000;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    
+    .main-content-inner {
+        margin: 0;
+    }
+    
+    p {
+        margin: 0 0 20px 0;
+    }
+    
+    #colophon a {
+        display: none !important;
+    }
+    
+}

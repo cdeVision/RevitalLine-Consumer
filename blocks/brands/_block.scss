@@ -1,0 +1,93 @@
+/* Brands Block */
+
+$brands-gap: 30px;           // column gap between cards
+$brands-gap-row: 80px;       // row gap between rows of brand cards (not sub-rows)
+$brands-gap-mobile: 0;    // column gap on mobile (unused at 1-col but kept for reference)
+$brands-logo-max-width: 390px;
+$brands-logo-max-height: 75px;
+
+.brands-block {
+  .brands-grid {
+    --brands-cols: 3;
+
+    display: grid;
+    grid-template-columns: repeat(var(--brands-cols), 1fr);
+    // row-gap: 0 keeps $brands-gap-row isolated to the ::after spacer row only,
+    // preventing it from leaking into the sub-rows within each card.
+    column-gap: $brands-gap;
+    row-gap: 0;
+    margin: 30px 0 0 0;
+
+    @media (max-width: $tablet-break) {
+      --brands-cols: 2;
+    }
+
+    @media (max-width: $mobile-break) {
+      --brands-cols: 1;
+      column-gap: 0;
+
+      // On single-column, subgrid alignment is not needed.
+      // Switch items to flex; ::after spacer still controls between-card spacing.
+      .brand-item {
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    .brand-item {
+      // Subgrid spans 5 rows:
+      // Row 1: logo  |  Row 2: h4  |  Row 3: description  |  Row 4: button  |  Row 5: spacer
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 5;
+
+      // Spacer row — the sole source of between-card row spacing.
+      // Because row-gap: 0 is set on the parent, $brands-gap-row is applied
+      // only here, never leaking into the sub-rows within each card.
+      &::after {
+        content: '';
+        display: block;
+        height: $brands-gap-row;
+      }
+
+      .brand-logo {
+        align-self: end; // bottom-aligns the logo within the shared row track
+        padding-bottom: 20px;
+
+        img {
+          display: block;
+          max-width: min($brands-logo-max-width, 100%);
+          max-height: $brands-logo-max-height;
+          width: auto;
+          height: auto;
+          margin: 0;
+        }
+      }
+
+      h3.h5 {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .brand-description {
+        font-size: var(--step-0);
+        line-height: var(--lh-step-0);
+        color: #333;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .brand-link {
+        padding-top: 20px;
+
+        .box {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

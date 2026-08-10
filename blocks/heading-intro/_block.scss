@@ -1,0 +1,47 @@
+
+/*	Heading Intro Block  */
+
+
+.heading-intro-box {
+  margin-block-end: $spacing-content-large;
+
+  @media (max-width: $mobile-break) {
+      margin-block-end: $spacing-content-medium;
+  }
+
+  .heading-intro-box-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    *:first-child {margin-top: 0;}
+
+    .heading-title-wrap {
+      .small-text {
+        font-size: var(--step-2);
+        font-family: $font-stack-headings;
+        margin-bottom: 10px;
+      }
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+      }
+
+    }
+
+  }
+
+}
+
+.heading-intro-box.block_size_full {
+  margin-block-end: 0;
+}

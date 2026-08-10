@@ -1,0 +1,32 @@
+{
+    "name": "cdev/blank",
+    "title": "Blank Block",
+    "description": "Starter blank block.",
+    "icon": "star-filled",
+    "category": "cdev-content-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blank.php",
+        "blockVersion": 3,
+        "hideFieldsInSidebar": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview": "blank"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "renaming": false,
+        "example": []
+    }
+}
