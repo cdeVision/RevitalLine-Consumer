@@ -46,11 +46,10 @@ $card-button-padding: 0 20px 20px 20px;
     overflow: hidden;
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 3;
+    grid-row: span 1; // text only by default
     gap: 0;
 
     .card-image {
-      grid-row: 1;
       img {
         aspect-ratio: 6 / 4;
         width: 100%;
@@ -61,13 +60,55 @@ $card-button-padding: 0 20px 20px 20px;
     }
 
     .card-text {
-      grid-row: 2;
+      grid-row: 1;
       padding: $card-padding;
     }
 
     .card-button {
-      grid-row: 3;
       padding: $card-button-padding;
+    }
+  }
+
+  // Images only (no buttons)
+  &.has-images .card-item {
+    grid-row: span 2;
+
+    .card-image {
+      grid-row: 1;
+    }
+
+    .card-text {
+      grid-row: 2;
+    }
+  }
+
+  // Buttons only (no images)
+  &.has-buttons .card-item {
+    grid-row: span 2;
+
+    .card-text {
+      grid-row: 1;
+    }
+
+    .card-button {
+      grid-row: 2;
+    }
+  }
+
+  // Images + buttons
+  &.has-images.has-buttons .card-item {
+    grid-row: span 3;
+
+    .card-image {
+      grid-row: 1;
+    }
+
+    .card-text {
+      grid-row: 2;
+    }
+
+    .card-button {
+      grid-row: 3;
     }
   }
 }

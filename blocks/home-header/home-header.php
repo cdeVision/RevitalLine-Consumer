@@ -33,7 +33,7 @@ $title_tag = 'h2';
                             <img src="<?php echo esc_url(get_sub_field('image')); ?>" width="1980" height="600" alt="<?php echo esc_attr(get_sub_field('image_alt')); ?>">
                             <div class="wrapper inner_alignwide">
                                 <div class="header-banner-text">
-                                    <<?php echo $title_tag; ?> class="h1"><?php echo esc_html($slide_headline); ?></<?php echo $title_tag; ?>>
+                                    <<?php echo $title_tag; ?> class="h1"><?php echo $slide_headline; ?></<?php echo $title_tag; ?>>
                                     <?php the_sub_field('banner_text'); ?>
                                     <?php
                                     $link_title = get_sub_field('link_title');

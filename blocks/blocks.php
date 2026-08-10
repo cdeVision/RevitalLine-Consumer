@@ -294,12 +294,85 @@ add_action( 'enqueue_block_editor_assets', 'my_theme_enqueue_block_editor_js_ass
 ////////////////////////////////////////////////////////////////
 // Apply blocks to page templates
 
+/**
+ * Default block markup for new (non-home) pages.
+ */
+function cdev_get_default_page_blocks() {
+	return '<!-- wp:cdev/page-header {"lock":{"move":true,"remove":true}} /-->' . "\n"
+		. '<!-- wp:cdev/column-one /-->';
+}
+
+/**
+ * Register editor block template for pages.
+ * Required for WP iframe editor: client applies this when a new empty page is created.
+ */
+function cdev_register_page_block_template() {
+	$post_type_object = get_post_type_object( 'page' );
+	if ( ! $post_type_object ) {
+		return;
+	}
+
+	$post_type_object->template = array(
+		array(
+			'cdev/page-header',
+			array(
+				'lock' => array(
+					'move'   => true,
+					'remove' => true,
+				),
+			),
+		),
+		array( 'cdev/column-one' ),
+	);
+}
+add_action( 'init', 'cdev_register_page_block_template' );
+
+/**
+ * Seed default block markup when WordPress creates a new empty page (auto-draft).
+ * Runs during insert (not after via wp_update_post) so REST/iframe editor receives content.
+ */
+function cdev_default_page_content_on_insert( $data, $postarr ) {
+	if ( ( $data['post_type'] ?? '' ) !== 'page' ) {
+		return $data;
+	}
+
+	// Only new inserts — never re-populate an existing page the user cleared.
+	if ( ! empty( $postarr['ID'] ) ) {
+		return $data;
+	}
+
+	if ( ! empty( $data['post_content'] ) ) {
+		return $data;
+	}
+
+	$data['post_content'] = cdev_get_default_page_blocks();
+
+	return $data;
+}
+add_filter( 'wp_insert_post_data', 'cdev_default_page_content_on_insert', 10, 2 );
+
+/**
+ * Fallback for classic get_default_post_to_edit() path.
+ */
+function cdev_filter_default_page_content( $content, $post ) {
+	if ( ! $post || ( $post->post_type ?? '' ) !== 'page' ) {
+		return $content;
+	}
+
+	if ( ! empty( $content ) ) {
+		return $content;
+	}
+
+	return cdev_get_default_page_blocks();
+}
+add_filter( 'default_content', 'cdev_filter_default_page_content', 10, 2 );
+
 function create_home_page($redirect = true) {
     global $page_template;
 
     // Define home page-specific block content
     $home_page_content = '
-    <!-- wp:cdev/home-header {"lock":{"move":true,"remove":true,"insert":false,"copy":false}} /-->
+    <!-- wp:cdev/home-header {"lock":{"move":true,"remove":true}} /-->
     <!-- wp:cdev/home-elevator /-->
     ';
 
@@ -326,41 +399,6 @@ function create_home_page($redirect = true) {
         }
     }
 }
-
-
-function set_default_template_for_new_pages($post_id, $post) {
-    if ($post->post_type !== 'page' || wp_is_post_revision($post_id)) {
-        return;
-    }
-
-    // If this was created as a custom home page, do nothing
-    if (get_post_meta($post_id, '_is_custom_home_page', true)) {
-        return;
-    }
-
-    // Default template
-    $default_template = '';
-
-    // Default block content for non-home pages
-    $default_blocks = '
-    <!-- wp:cdev/page-header {"lock":{"move":true,"remove":true,"insert":false,"copy":false}} /-->
-    <!-- wp:cdev/column-one /-->
-    ';
-
-    // Apply the default template **only if no template is already set**
-    if (!get_post_meta($post_id, '_wp_page_template', true)) {
-        update_post_meta($post_id, '_wp_page_template', $default_template);
-    }
-
-    // Only set default content if the page is empty
-    if (empty($post->post_content)) {
-        wp_update_post([
-            'ID'           => $post_id,
-            'post_content' => $default_blocks,
-        ]);
-    }
-}
-add_action('wp_insert_post', 'set_default_template_for_new_pages', 10, 2);
 
 // Add menu item under "Pages" in admin
 function add_create_home_page_menu() {

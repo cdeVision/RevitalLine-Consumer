@@ -109,11 +109,16 @@ a.box.pdf:after {
   content: "\f1c1";
 }
 
-a.box.loc:after,
-.primary-menu .menu-item.rep a:after {
+a.box.loc:after {
   font-size: 14px;
 	padding-left: 8px;
   content: "\f3c5";
+}
+
+.primary-menu .menu-item.rep a:after {
+  font-size: 14px;
+	padding-left: 8px;
+  content: "\f07a";
 }
 
 a.box.down:after {

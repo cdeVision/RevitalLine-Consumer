@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*
-Theme Name: RevitalLine - Consumer
+Theme Name: RevitalLine - SlantFin
 Theme URI: http://cdevision.com/
 Author: cdeVision
 Author URI: http://cdevision.com/
-Description: Custom theme for RevitalLine - Consumer
+Description: Custom theme for RevitalLine - SlantFin
 Version: 7.3
 License: No copy or resale
 License URI: http://cdevision.com/
-Text Domain: RevitalLine - Consumer
+Text Domain: RevitalLine - SlantFin
 Tags: 
 */
 /*
@@ -714,11 +714,16 @@ a.box.pdf:after {
   content: "\f1c1";
 }
 
-a.box.loc:after,
-.primary-menu .menu-item.rep a:after {
+a.box.loc:after {
   font-size: 14px;
   padding-left: 8px;
   content: "\f3c5";
+}
+
+.primary-menu .menu-item.rep a:after {
+  font-size: 14px;
+  padding-left: 8px;
+  content: "\f07a";
 }
 
 a.box.down:after {
@@ -1219,8 +1224,8 @@ img[class*=wp-image-] {
 
 /* Site Branding */
 .site-branding {
-  width: 275px;
-  height: 79px;
+  width: 247px;
+  height: 80px;
   position: absolute;
   bottom: 28px;
   left: 0;
@@ -1246,15 +1251,15 @@ img[class*=wp-image-] {
 
 @media (max-width: 1200px) {
   .site-branding {
-    width: 260px;
-    height: 75px;
+    width: 247px;
+    height: 80px;
   }
 }
 /* Mobile */
 @media (max-width: 767px) {
   .site-branding {
-    width: 260px;
-    height: 75px;
+    width: 247px;
+    height: 80px;
     position: absolute;
     bottom: auto;
     top: 50%;
@@ -2301,11 +2306,8 @@ body.resize-animation-stopper * {
   overflow: hidden;
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 1;
   gap: 0;
-}
-.cards-grid .card-item .card-image {
-  grid-row: 1;
 }
 .cards-grid .card-item .card-image img {
   aspect-ratio: 6/4;
@@ -2317,12 +2319,41 @@ body.resize-animation-stopper * {
      object-position: center center;
 }
 .cards-grid .card-item .card-text {
-  grid-row: 2;
+  grid-row: 1;
   padding: 20px;
 }
 .cards-grid .card-item .card-button {
-  grid-row: 3;
   padding: 0 20px 20px 20px;
+}
+.cards-grid.has-images .card-item {
+  grid-row: span 2;
+}
+.cards-grid.has-images .card-item .card-image {
+  grid-row: 1;
+}
+.cards-grid.has-images .card-item .card-text {
+  grid-row: 2;
+}
+.cards-grid.has-buttons .card-item {
+  grid-row: span 2;
+}
+.cards-grid.has-buttons .card-item .card-text {
+  grid-row: 1;
+}
+.cards-grid.has-buttons .card-item .card-button {
+  grid-row: 2;
+}
+.cards-grid.has-images.has-buttons .card-item {
+  grid-row: span 3;
+}
+.cards-grid.has-images.has-buttons .card-item .card-image {
+  grid-row: 1;
+}
+.cards-grid.has-images.has-buttons .card-item .card-text {
+  grid-row: 2;
+}
+.cards-grid.has-images.has-buttons .card-item .card-button {
+  grid-row: 3;
 }
 
 /*	Hero Block - Image and Text  */

@@ -62,40 +62,56 @@ if($block_background_image) {
     
     <?php if ($card_headline == 'yes') : ?>
         <div class="card_headline">
-        <h2 class="h2"><?php echo esc_html($headline); ?></h2>
+        <h2 class="h2"><?php echo $headline; ?></h2>
         <?php displayShowLink("none",false,"none"); ?>
         </div>
     <?php endif; ?>
 
-    <?php if ($cards) : ?>
-        <div class="cards-grid <?php echo esc_attr($card_columns); ?>">
+    <?php if ($cards) :
+        $has_images = false;
+        $has_buttons = false;
+        foreach ($cards as $card) {
+            if (!empty($card['image'])) {
+                $has_images = true;
+            }
+            if (!empty($card['show_link']) && $card['show_link'] !== 'none') {
+                $has_buttons = true;
+            }
+        }
+        $grid_classes = array_filter([
+            $card_columns,
+            $has_images ? 'has-images' : '',
+            $has_buttons ? 'has-buttons' : '',
+        ]);
+    ?>
+        <div class="cards-grid <?php echo esc_attr(implode(' ', $grid_classes)); ?>">
 
             <?php foreach ($cards as $card) :
                 $headline = $card['headline'] ?: 'Headline';
                 $text = $card['text'] ?: '<p>This is placeholder text. Add your content here by selecting this block and entering your text. Customize the text style, formatting, and layout to fit your needs.</p>';
-                $image = $card['image'] ?: get_placeholder_image(600, 400);
-                $image_alt = $card['image_alt'] ?: 'Temp ALT Text';
+                $image = !empty($card['image']) ? $card['image'] : '';
+                $image_alt = $card['image_alt'] ?: '';
                 $show_link = $card['show_link'] ?: false;
             ?>
                 <div class="card-item <?php echo esc_attr($card_background); ?>">
+                    <?php if ($image) : ?>
                     <div class="card-image">
                         <img src="<?php echo esc_url($image); ?>" width="600" height="400" alt="<?php echo esc_attr($image_alt); ?>">
                     </div>
+                    <?php endif; ?>
                     <div class="card-text clear-both">
-                        <h3 class="h4"><?php echo esc_html($headline); ?></h3>
+                        <h3 class="h5"><?php echo $headline; ?></h3>
                         <?php echo wp_kses_post($text); ?>
                     </div>
+                    <?php if ($show_link && $show_link != "none") : ?>
                     <div class="card-button">
-                        <?php 
-                        // If show link is not none
-                        if ($show_link != "none" ) {
-
+                        <?php
                         // URL
                         if ($show_link == "url") {
                             echo '<a href="' . $card['show_link_url'] . '" target="' . $card['show_link_target'] . '" class="box ' . $card['class'] . '">' . $card['show_link_title'] . '</a>';
                         }
 
-                        // 
+                        // PDF
                         if ($show_link == "pdf") {
                             echo '<a href="' . $card['show_pdf'] . '" target="_blank" class="box pdf ' . $card['class'] . '">' . $card['show_link_title'] . '</a>';
                         }
@@ -126,13 +142,9 @@ if($block_background_image) {
                                 echo '<a href="#' . $show_anchor . '" class="box ' . $anchor_type . ' ' . $card['class'] . '">' . $show_link_title . '</a>';
                             }
                         }
-
-                        // End if show link is not none
-                        }
                         ?>
-
-
                     </div>
+                    <?php endif; ?>
                 </div>
             <?php endforeach; ?>
 

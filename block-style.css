@@ -530,11 +530,16 @@ a.box.pdf:after {
   content: "\f1c1";
 }
 
-a.box.loc:after,
-.primary-menu .menu-item.rep a:after {
+a.box.loc:after {
   font-size: 14px;
   padding-left: 8px;
   content: "\f3c5";
+}
+
+.primary-menu .menu-item.rep a:after {
+  font-size: 14px;
+  padding-left: 8px;
+  content: "\f07a";
 }
 
 a.box.down:after {
@@ -1910,11 +1915,8 @@ p.gform_required_legend {
   overflow: hidden;
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 1;
   gap: 0;
-}
-.cards-grid .card-item .card-image {
-  grid-row: 1;
 }
 .cards-grid .card-item .card-image img {
   aspect-ratio: 6/4;
@@ -1926,12 +1928,41 @@ p.gform_required_legend {
      object-position: center center;
 }
 .cards-grid .card-item .card-text {
-  grid-row: 2;
+  grid-row: 1;
   padding: 20px;
 }
 .cards-grid .card-item .card-button {
-  grid-row: 3;
   padding: 0 20px 20px 20px;
+}
+.cards-grid.has-images .card-item {
+  grid-row: span 2;
+}
+.cards-grid.has-images .card-item .card-image {
+  grid-row: 1;
+}
+.cards-grid.has-images .card-item .card-text {
+  grid-row: 2;
+}
+.cards-grid.has-buttons .card-item {
+  grid-row: span 2;
+}
+.cards-grid.has-buttons .card-item .card-text {
+  grid-row: 1;
+}
+.cards-grid.has-buttons .card-item .card-button {
+  grid-row: 2;
+}
+.cards-grid.has-images.has-buttons .card-item {
+  grid-row: span 3;
+}
+.cards-grid.has-images.has-buttons .card-item .card-image {
+  grid-row: 1;
+}
+.cards-grid.has-images.has-buttons .card-item .card-text {
+  grid-row: 2;
+}
+.cards-grid.has-images.has-buttons .card-item .card-button {
+  grid-row: 3;
 }
 
 /*	Hero Block - Image and Text  */
