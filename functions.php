@@ -275,11 +275,16 @@ require get_template_directory() . '/includes/functions/posts.php';
 require get_template_directory() . '/includes/functions/gravity-forms.php';
 
 /**
- * WooCommerce functions
+ * Testimonials
  */
-//require get_template_directory() . '/includes/functions/woocommerce.php';
+require get_template_directory() . '/includes/functions/testimonials.php';
 
 /**
  * Brand post type functions
  */
 require get_template_directory() . '/includes/functions/brands.php';
+
+/**
+ * Resource post type functions
+ */
+require get_template_directory() . '/includes/functions/resources.php';

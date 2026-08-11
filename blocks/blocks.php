@@ -22,13 +22,20 @@ function cdev_register_block_scripts() {
 	wp_register_script( 'home-slider-js', get_template_directory_uri() . '/blocks/home-header/home-slider.js', array( 'jquery', 'slick-js' ), '', true );
 	wp_register_script( 'home-video-js', get_template_directory_uri() . '/blocks/home-header/home-video.js', array( 'jquery' ), '', true );
 
-	// Logo Slider / Slideshow
+	// Logo Slider / Slideshow / Testimonials
 	wp_register_script( 'logo-slider-js', get_template_directory_uri() . '/blocks/logo-slider/logo-slider.js', array( 'jquery', 'slick-js' ), '', true );
 	wp_register_script( 'slideshow-js', get_template_directory_uri() . '/blocks/slideshow/slideshow.js', array( 'jquery', 'slick-js' ), '', true );
+	wp_register_script( 'testimonials-js', get_template_directory_uri() . '/blocks/testimonials/testimonials-slider.js', array( 'jquery', 'slick-js' ), '', true );
 
 	// Accordion / Gallery
 	wp_register_script( 'accordion-js', get_template_directory_uri() . '/blocks/accordion/accordion.js', array( 'jquery' ), '', true );
 	wp_register_script( 'gallery-js', get_template_directory_uri() . '/blocks/gallery/gallery.js', array( 'jquery' ), '', true );
+
+	// Resources Center (AJAX load more)
+	wp_register_script( 'resources-center-js', get_template_directory_uri() . '/blocks/resources-center/resources-center.js', array( 'jquery' ), '', true );
+	wp_localize_script( 'resources-center-js', 'cdev_resources_params', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	) );
 
 }
 // Register early so block.json "script" handles exist before register_block_type() on init (priority 10).

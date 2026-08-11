@@ -219,9 +219,6 @@
 
     &.footer {
         margin-left: auto;
-        @media (max-width: $menu-hide) {
-            margin-left: 0;
-        }
     }
 
     span {

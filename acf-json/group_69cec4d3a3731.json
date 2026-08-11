@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Find the Rep for Your Region",
+            "default_value": "Ready to Refresh Your Baseboards?",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -37,7 +37,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Connect with your local rep for pricing, availability, and next steps.",
+            "default_value": "Find RevitalLine at Home Depot, Supply House, or a regional distributor near you.",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -90,5 +90,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1775158644
+    "modified": 1775845260
 }

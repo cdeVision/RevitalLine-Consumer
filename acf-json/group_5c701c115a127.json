@@ -3,6 +3,28 @@
     "title": "Copyright",
     "fields": [
         {
+            "key": "field_6a7b4506c1df8",
+            "label": "Disclaimer",
+            "name": "disclaimer",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5c701c1999458",
             "label": "Copyright",
             "name": "copyright",
@@ -44,11 +66,10 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1775160149
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1786463529
 }

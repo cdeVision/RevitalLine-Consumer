@@ -6,20 +6,21 @@
 
 
  
-$rep_headline = get_field('rep-headline','options');
-$rep_text = get_field('rep-text','options');
-
-$rep_url = get_field('rep-url','options');
+$rep_headline = get_field('rep-headline','options') ?: 'Ready to Refresh Your Baseboards?';
+$rep_text     = get_field('rep-text','options') ?: 'Find RevitalLine at Home Depot, Supply House, or a regional distributor near you.';
+$rep_url      = get_field('rep-url','options');
 ?>
 
 <?php if ($rep_headline || $rep_text || $rep_url) : ?>
     <a href="<?php echo esc_url( $rep_url ); ?>" class="cta">
         <span class="cta__inner">
             <span class="cta__lead">
-                <span class="cta__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
-                <span class="cta__title"><?php echo esc_html( $rep_headline ); ?></span>
+                <span class="cta__icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></span>
+                <span class="cta__title"><?php echo $rep_headline; ?></span>
             </span>
-            <span class="cta__text"><?php echo esc_html( $rep_text ); ?></span>
+            <?php if ( $rep_text ) : ?>
+                <span class="cta__text"><?php echo $rep_text; ?></span>
+            <?php endif; ?>
         </span>
     </a>
 <?php endif; ?>
@@ -43,40 +44,15 @@ $rep_url = get_field('rep-url','options');
             <?php the_field('contact_2', 'options'); ?>
         </div>
 
-        <div class="assoc">
-            <?php if( have_rows('association_logos', 'options') ): ?>
-            <ul>
-            <?php while( have_rows('association_logos', 'options') ): the_row(); 
-                $assoc_name = get_sub_field('name');
-                $assoc_logo = get_sub_field('logo');
-                $assoc_logo_url = get_sub_field('logo_url');
-                $assoc_url = get_sub_field('url');
-
-                if($assoc_logo_url){
-                    $assoc_logo = $assoc_logo_url;
-                }
-                ?>
-                <li>
-                <?php if( $assoc_url ){ ?>
-                <a href="<?php echo $assoc_url; ?>" target="_blank">
-                <?php } ?>
-                <img src="<?php echo esc_url($assoc_logo['url']); ?>" width="<?php echo esc_attr($assoc_logo['width']); ?>" height="<?php echo esc_attr($assoc_logo['height']); ?>" alt="<?php echo $assoc_name; ?>" title="<?php echo $assoc_name; ?>">
-                <?php if( $assoc_url ){ ?>
-                </a>
-                <?php } ?>
-                </li>
-            <?php endwhile; ?>
-            
-            </ul>
-            <?php endif; ?>
-        </div>
+        <?php cdev_social_links('footer', true, true); ?>
         
         
     </div>
     
 
     <div class="site-info x-small-text">
-        <p>&copy; <?php auto_copyright('2026'); ?> - <?php the_field('copyright', 'options'); ?></p>
+        <p><?php the_field('disclaimer', 'options'); ?></p>
+        <p>&copy; Copyright <?php auto_copyright('2026'); ?>. <?php the_field('copyright', 'options'); ?></p>
         <p>Site by <a href="https://www.cdevision.com" target="_blank">cdeVision</a></p>
     </div><!-- .site-info -->
     

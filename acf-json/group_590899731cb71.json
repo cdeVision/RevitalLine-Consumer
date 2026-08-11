@@ -130,11 +130,11 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-header"
+                "value": "acf-options-footer"
             }
         ]
     ],
-    "menu_order": 40,
+    "menu_order": 91,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -146,11 +146,10 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1775080779
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1786463771
 }

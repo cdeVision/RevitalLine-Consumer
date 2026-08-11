@@ -18,32 +18,39 @@ if (display_preview_image()) {
 }
 
 // Determine the title to display
-$is_blog = is_single() || is_category() || is_archive() || (is_admin() && get_post_type() == 'post');
-$title_override = '';
+// Limit blog logic to the post type so other CPT singles (e.g. resource) are not treated as blog
+$is_blog = is_singular( 'post' ) || is_category() || is_archive() || ( is_admin() && get_post_type() == 'post' );
 
-// If this is a blog page, set the title to "Blog"
-if ($is_blog) {
-    $title_override = is_category() || is_archive() ? single_cat_title('', false) : "Blog";
-}
-// If this is a search page, set the title to "Search"
-if (is_search()) {
-    $title_override = "Search";
-}
-// if this is the 404 page, set the title to "404"
-if (is_404()) {
-    $title_override = get_field('error_headline','options');
-    if( !$title_override ){
-        $title_override = "404 Page Not Found";
-    }
+// Allow templates to pass $title_override / $title_tag before include
+if ( empty( $title_override ) ) {
+	$title_override = '';
+
+	// If this is a blog page, set the title to "Blog"
+	if ( $is_blog ) {
+		$title_override = is_category() || is_archive() ? single_cat_title( '', false ) : 'Blog';
+	}
+	// If this is a search page, set the title to "Search"
+	if ( is_search() ) {
+		$title_override = 'Search';
+	}
+	// if this is the 404 page, set the title to "404"
+	if ( is_404() ) {
+		$title_override = get_field( 'error_headline', 'options' );
+		if ( ! $title_override ) {
+			$title_override = '404 Page Not Found';
+		}
+	}
 }
 
-$override_page_title = get_field('override_page_title');
-$title = $title_override ?: $override_page_title ?: get_the_title();
-$title_tag = 'h1';
-$has_title_override = !empty($title_override) || !empty($override_page_title);
+$override_page_title = get_field( 'override_page_title' );
+$title               = $title_override ?: $override_page_title ?: get_the_title();
+$title_tag           = $title_tag ?? 'h1';
+$has_title_override  = ! empty( $title_override ) || ! empty( $override_page_title );
 
-// Get header style and background
-$header_style = get_field('header_style');
+// Get header style and background (templates may pass $header_style before include)
+if ( empty( $header_style ) ) {
+	$header_style = get_field( 'header_style' );
+}
 
 if ($header_style == 'header-simple' || $header_style == 'header-banner' || $header_style == 'header-banner-jumbo'){
     $header_banner_text_animation = 'has-animation fade-in';
@@ -61,7 +68,7 @@ if ($header_style == 'header-slideshow' && !have_rows('banner_slideshow')){
         <?php // Display the banner text ///////////////////////// ?>
         <div class="wrapper inner_alignwide">
             <div class="header-banner-text clear-both <?php echo esc_attr($header_banner_text_animation); ?>">
-                <<?php echo $title_tag; ?> class="h2"<?php echo $has_title_override ? ' data-title-override="true"' : ''; ?>><?php echo esc_html($title); ?></<?php echo $title_tag; ?>>
+                <<?php echo $title_tag; ?> class="h2"<?php echo $has_title_override ? ' data-title-override="true"' : ''; ?>><?php echo $title; ?></<?php echo $title_tag; ?>>
                 <?php if (in_array($header_style, ['header-banner-jumbo', 'header-video', 'header-slideshow'])): ?>
                     <?php the_field('banner_text'); ?>
                     <?php displayShowLink("p", false, "none"); ?>

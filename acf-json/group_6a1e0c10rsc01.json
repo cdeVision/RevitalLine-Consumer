@@ -1,0 +1,144 @@
+{
+    "key": "group_6a1e0c10rsc01",
+    "title": "Block - Resources Center",
+    "fields": [
+        {
+            "key": "field_6a1e0c10rsc02",
+            "label": "Resources Center",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6a1e0c10rsc03",
+            "label": "Featured Heading",
+            "name": "featured_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Featured",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Featured",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a1e0c10rsc04",
+            "label": "Grid Heading",
+            "name": "grid_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "More How-to Resources",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "More How-to Resources",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a1e0c10rsc05",
+            "label": "Load More Button Text",
+            "name": "load_more_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "VIEW MORE RESOURCES",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "VIEW MORE RESOURCES",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a1e0c10rsc06",
+            "label": "Block Options",
+            "name": "block_options",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_675a14013ebca",
+                "group_6792a70e2237e",
+                "group_679a9375148a8",
+                "group_679a79167e96c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "cdev\/resources-center"
+            }
+        ]
+    ],
+    "menu_order": 39,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1786464000
+}

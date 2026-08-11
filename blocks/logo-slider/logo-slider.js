@@ -53,9 +53,14 @@
   }
 
   function initializeSlick() {
-    $('.logo_slideshow').not('.slick-initialized').each(function () {
+    $('.logo_slideshow').not('.slick-initialized').not('.is-static').each(function () {
       var $slideshow = $(this);
       if (!$slideshow.children().length) {
+        return;
+      }
+      // Few logos: keep as static flex grid (no slider)
+      if ($slideshow.children().length <= 3) {
+        $slideshow.addClass('is-static');
         return;
       }
       if (typeof $slideshow.slick !== 'function') {

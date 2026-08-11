@@ -36,7 +36,6 @@
             },
             "choices": {
                 "header-simple": "Headline",
-                "header-banner": "Banner - thin",
                 "header-banner-jumbo": "Banner Jumbo",
                 "header-slideshow": "Banner Slideshow",
                 "header-video": "Video"
@@ -209,7 +208,7 @@
             "name": "banner_thin",
             "aria-label": "",
             "type": "image_aspect_ratio_crop",
-            "instructions": "Note: Image size 1,980px X 200px. Preview is smaller than actual image.",
+            "instructions": "Note: Image size 1,980px X 400px. Preview is smaller than actual image.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -219,12 +218,12 @@
             },
             "crop_type": "pixel_size",
             "aspect_ratio_width": 1980,
-            "aspect_ratio_height": 200,
+            "aspect_ratio_height": 400,
             "return_format": "url",
             "preview_size": "cdev_post_thumb",
             "library": "all",
             "min_width": 1980,
-            "min_height": 200,
+            "min_height": 400,
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -451,7 +450,7 @@
             }
         ]
     ],
-    "menu_order": 32,
+    "menu_order": 83,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -474,11 +473,10 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1775080779
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1786461296
 }

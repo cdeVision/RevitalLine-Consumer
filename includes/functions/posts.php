@@ -81,6 +81,48 @@ function force_post_categ()
 //add_action('edit_form_advanced', 'force_post_categ');
 
 ////////////////////////////////////////////////////////
+// AJAX - Load More Resources Center Posts
+
+function cdev_resources_loadmore_ajax_handler() {
+
+	$page     = absint( $_POST['page'] ?? 0 ) + 1;
+	$per_page = absint( $_POST['per_page'] ?? 2 );
+	if ( $per_page < 1 ) {
+		$per_page = 2;
+	}
+
+	$excluded_raw = sanitize_text_field( wp_unslash( $_POST['excluded'] ?? '' ) );
+	$excluded     = array_filter( array_map( 'absint', explode( ',', $excluded_raw ) ) );
+
+	$args = array(
+		'post_type'      => 'resource',
+		'post_status'    => 'publish',
+		'posts_per_page' => $per_page,
+		'paged'          => $page,
+		'orderby'        => 'menu_order',
+		'order'          => 'ASC',
+	);
+
+	if ( ! empty( $excluded ) ) {
+		$args['post__not_in'] = $excluded;
+	}
+
+	$query = new WP_Query( $args );
+
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			get_template_part( 'loop', 'resource-listing' );
+		}
+		wp_reset_postdata();
+	}
+
+	wp_die();
+}
+add_action( 'wp_ajax_resources_loadmore', 'cdev_resources_loadmore_ajax_handler' );
+add_action( 'wp_ajax_nopriv_resources_loadmore', 'cdev_resources_loadmore_ajax_handler' );
+
+////////////////////////////////////////////////////////
 
 
 ?>

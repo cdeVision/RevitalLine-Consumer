@@ -51,13 +51,16 @@ $number_of_logos = get_field('number_of_logos');
 if ( !$number_of_logos ) {
     $number_of_logos = 4;
 }
+$logos = get_field('logos');
+$logo_count = is_array($logos) ? count($logos) : 0;
+$is_static = $logo_count > 0 && $logo_count <= 3;
 ?>
     <?php 
     // check if the repeater field has rows of data
     if( have_rows('logos') ):?>
-	<div class="logo_slideshow" data-slick='{
+	<div class="logo_slideshow<?php echo $is_static ? ' is-static' : ''; ?>"<?php if ( ! $is_static ) : ?> data-slick='{
             "slidesToShow": <?php echo esc_attr($number_of_logos); ?>
-        }'>
+        }'<?php endif; ?>>
 
             <?php 
             // loop through the rows of data

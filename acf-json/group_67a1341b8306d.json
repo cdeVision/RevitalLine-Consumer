@@ -103,6 +103,7 @@
                 "id": ""
             },
             "choices": {
+                "2": "2",
                 "3": "3",
                 "4": "4",
                 "5": "5",
@@ -265,11 +266,10 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1775575875
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1786468235
 }
